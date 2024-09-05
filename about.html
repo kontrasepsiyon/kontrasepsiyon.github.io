@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yöntemler</title>
+    <title>Page 2</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
+        /* Menu styling */
         .menu {
-            display: none;
-            background-color: #333;
-            position: absolute;
-            top: 0;
-            right: 0;
+            position: fixed;
+            top: 10%;
+            left: 0;
             width: 200px;
             height: 100vh;
+            background-color: #333;
+            transform: translateX(-200px); /* Initially hidden */
+            transition: transform 0.3s ease;
             padding-top: 50px;
         }
         .menu a {
@@ -30,6 +32,12 @@
         .menu a:hover {
             background-color: #575757;
         }
+        /* Menu open state */
+        .menu.open {
+            transform: translateX(0); /* Slide the menu into view */
+        }
+
+        /* Hamburger icon styling */
         .hamburger {
             font-size: 30px;
             cursor: pointer;
@@ -46,23 +54,27 @@
 </head>
 <body>
 
+<!-- Header with Hamburger Menu -->
 <div class="header">
-    <h1>Page 2</h1>
     <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <h1>Page 2</h1>
 </div>
 
+<!-- Navigation Menu -->
 <div class="menu" id="menu">
-    <a href="index.html">Anasayfa</a>
-    <a href="about.html">Hakkında</a>
+    <a href="index.html">Homepage</a>
+    <a href="about.html">About</a>
 </div>
 
+<!-- Main Content -->
 <h1>Welcome to Page 2</h1>
 <p>This is the second page of our simple website with a hamburger menu for navigation.</p>
 
+<!-- JavaScript to Toggle Menu -->
 <script>
     function toggleMenu() {
         const menu = document.getElementById('menu');
-        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        menu.classList.toggle('open'); // Toggle the open class to show/hide menu
     }
 </script>
 
