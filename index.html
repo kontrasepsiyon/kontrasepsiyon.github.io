@@ -1,82 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 1 - Home</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        /* Menu styling */
-        .menu {
-            position: fixed;
-            top: 10%;
-            left: 0;
-            width: 200px;
-            height: 100vh;
-            background-color: #333;
-            transform: translateX(-200px); /* Initially hidden */
-            transition: transform 0.3s ease;
-            padding-top: 50px;
-        }
-        .menu a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            text-align: center;
-        }
-        .menu a:hover {
-            background-color: #575757;
-        }
-        /* Menu open state */
-        .menu.open {
-            transform: translateX(0); /* Slide the menu into view */
-        }
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contrceptions and Reproduction Health</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-        /* Hamburger icon styling */
-        .hamburger {
-            font-size: 30px;
-            cursor: pointer;
-            padding: 15px;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-        }
-    </style>
-</head>
-<body>
+    <body>
 
-<!-- Header with Hamburger Menu -->
-<div class="header">
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-    <h1>Page 1</h1>
-</div>
+        <header>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <h1>Contrceptions and Reproduction Health</h1>
+            <img style="width: 12%;" src="sources/kontrasepsiyon-ve-ureme-sagligi-dernegi-logo-.webp" type="image/webp">
+        </header>
 
-<!-- Navigation Menu -->
-<div class="menu" id="menu">
-    <a href="index.html">Homepage</a>
-    <a href="about.html">About</a>
-</div>
+        <aside id="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="loadPage('eligibility-tool')">Eligibility tool</a></li>
+                    <li><a href="#" onclick="loadPage('other-condiditons')">Other conditions</a></li>
+                    <li><a href="#" onclick="loadPage('additional-info')">Additional info</a></li>
+                    <li><a href="#" onclick="loadPage('how-to-use-the-tool')">How to use the tool</a></li>
+                    <li><a href="#" onclick="loadPage('about')">About</a></li>
+                    <li><a href="#" onclick="loadPage('language')">Language</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-<!-- Main Content -->
-<h1>Welcome to Page 1</h1>
-<p>This is the first page of our simple website with a hamburger menu for navigation.</p>
+        <main id="content">
+            <h2>Welcome</h2>
+            <p>This is the home page.</p>
+        </main>
 
-<!-- JavaScript to Toggle Menu -->
-<script>
-    function toggleMenu() {
-        const menu = document.getElementById('menu');
-        menu.classList.toggle('open'); // Toggle the open class to show/hide menu
-    }
-</script>
-
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
