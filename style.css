@@ -41,10 +41,20 @@ aside nav ul li {
     margin: 15px 0;
 }
 
+/*
 aside nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
+}
+*/
+
+aside nav ul li button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #444;
 }
 
 main {
