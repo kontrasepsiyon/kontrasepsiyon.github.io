@@ -1,12 +1,44 @@
-function setLanguage(lang) {
-    localStorage.setItem('language', lang);
+const defaultLanguage = 'en';
 
-    var json_lang_dictionary = fetch('lanugages/' + lang + '.json');
-
-    document.getElementById("title").innerHTML = json_lang_dictionary['contrceptions-and-reproduction-health'];
-    document.getElementById("h1_1").innerHTML = json_lang_dictionary['contrceptions-and-reproduction-health'];
-
+// Function to load the JSON file for the selected language
+async function loadLanguage(language) {
+    try {
+        const response = await fetch(`${language}.json`);
+        const translations = await response.json();
+        return translations;
+    } catch (error) {
+        console.error("Error loading language file:", error);
+    }
 }
+
+// Function to update the text content based on the loaded translations
+function updateContent(translations) {
+    document.querySelectorAll('[data-lang]').forEach(elt => {
+        const key = elt.getAttribute('data-lang');
+        elt.textContent = translations[key] || key;
+    });
+}
+
+// Function to set the language and update the site content
+async function setLanguage(language) {
+    const translations = await loadLanguage(language);
+    if (translations) {
+        updateContent(translations);
+        localStorage.setItem('preferredLanguage', language); // Store user's choice
+    }
+}
+
+// Load the user's preferred language on page load
+document.addEventListener("DOMContentLoaded", () => {
+    const savedLanguage = localStorage.getItem('preferredLanguage') || defaultLanguage;
+    setLanguage(savedLanguage);
+});
+
+
+
+
+
+
 
 function toggleMenu() {
     document.body.classList.toggle('openMenu');
