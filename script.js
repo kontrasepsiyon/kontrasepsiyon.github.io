@@ -3,7 +3,7 @@ const defaultLanguage = 'en';
 // Function to load the JSON file for the selected language
 async function loadLanguage(language) {
     try {
-        const response = await fetch(`${language}.json`);
+        const response = await fetch(`language/${language}.json`);
         const translations = await response.json();
         return translations;
     } catch (error) {
