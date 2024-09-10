@@ -1,7 +1,7 @@
 function setLanguage(lang) {
     localStorage.setItem('language', lang);
 
-    var json_lang_dictionary = require('lanugages/' + lang + '.json');
+    var json_lang_dictionary = fetch('lanugages/' + lang + '.json');
 
     document.getElementById("title").innerHTML = json_lang_dictionary['contrceptions-and-reproduction-health'];
     document.getElementById("h1_1").innerHTML = json_lang_dictionary['contrceptions-and-reproduction-health'];
