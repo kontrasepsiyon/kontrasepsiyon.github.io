@@ -2,6 +2,7 @@ function toggleMenu() {
     document.body.classList.toggle('openMenu');
 }
 
+/*
 function loadPage(page) {
     const content = document.getElementById('content');
 
@@ -31,6 +32,7 @@ function loadPage(page) {
 
     document.body.classList.toggle('openMenu');
 }
+*/
 
 function loadPage(page) {
     const content = document.getElementById('content');
