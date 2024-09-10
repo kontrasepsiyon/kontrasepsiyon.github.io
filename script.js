@@ -6,10 +6,10 @@ function loadPage(page) {
     const content = document.getElementById('content');
     
     // Fetch the HTML content from the respective file
-    fetch('${page}.html')
+    fetch(`${page}.html`)
         .then(response => {
             if (!response.ok) {
-                throw new Error('Error fetching the ${page}.html file');
+                throw new Error(`Error fetching the ${page}.html file`);
             }
             return response.text();
         })
@@ -18,9 +18,10 @@ function loadPage(page) {
             content.innerHTML = data;
         })
         .catch(error => {
-            content.innerHTML = '<h2>Error</h2><p>${error.message}</p>';
+            content.innerHTML = `<h2>Error</h2><p>${error.message}</p>`;
         });
 
     document.body.classList.toggle('openMenu');
 
 }
+
