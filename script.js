@@ -24,13 +24,13 @@ async function setLanguage(language) {
     const translations = await loadLanguage(language);
     if (translations) {
         updateContent(translations);
-        localStorage.setItem('preferredLanguage', language); // Store user's choice
+        localStorage.setItem('language', language); // Store user's choice
     }
 }
 
 // Load the user's preferred language on page load
 document.addEventListener("DOMContentLoaded", () => {
-    const savedLanguage = localStorage.getItem('preferredLanguage') || defaultLanguage;
+    const savedLanguage = localStorage.getItem('language') || defaultLanguage;
     setLanguage(savedLanguage);
 });
 
