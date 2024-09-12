@@ -23,6 +23,10 @@ header {
     cursor: pointer;
 }
 
+.logo {
+    width: 12%;
+}
+
 aside {
     width: 250px;
     background-color: #444;
@@ -70,4 +74,13 @@ main {
 
 .openMenu main {
     margin-left: 250px;
+}
+
+@media (max-width: 500px) {
+    .title {
+        font-size: small;
+    }
+    .logo {
+        width: 20%;
+    }
 }
