@@ -1,2 +1,23 @@
 <h2>Eligibility Tool</h2>
-<p>This is the Eligibility Tool page.</p>
+
+<form id="booleanForm">
+    <label>
+        Option 1: <input type="checkbox" name="option1" value="true"> True
+    </label><br>
+    <label>
+        Option 2: <input type="checkbox" name="option2" value="true"> True
+    </label><br>
+    <label>
+        Option 3: <input type="checkbox" name="option3" value="true"> True
+    </label><br>
+    <button type="button" onclick="getSelectedBooleans()">Submit</button>
+</form>
+
+<h3>Multi-Select Dropdown:</h3>
+<select id="multiSelect" multiple>
+    <option value="value1">Value 1</option>
+    <option value="value2">Value 2</option>
+    <option value="value3">Value 3</option>
+    <option value="value4">Value 4</option>
+</select>
+<button type="button" onclick="getMultiSelectedValues()">Submit</button>
