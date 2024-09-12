@@ -53,27 +53,18 @@ aside nav ul li button {
     background-color: #444;
 }
 
-.button {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border: none;
-    background-color: #444;
-    margin-left: 5%
-}
-
-main {
-    padding: 20px;
-    transition: margin-left 0.3s ease;
-    margin-left: 0;
-}
-
 .openMenu aside {
     left: 0;
 }
 
 .openMenu main {
     margin-left: 250px;
+}
+
+main {
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+    margin-left: 0;
 }
 
 @media (max-width: 500px) {
