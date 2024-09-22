@@ -63,7 +63,7 @@ function loadPage(page) {
         })
         .then(data => {
             // Insert the fetched content into the main content area
-            loadPage('scripts/eligibility.js');
+            loadScript('scripts/eligibility.js');
 
             content.innerHTML = data;
         })
