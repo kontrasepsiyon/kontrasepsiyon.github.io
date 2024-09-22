@@ -38,14 +38,6 @@
     </main>
 
     <script src="scripts/main.js"></script>
-    <script>
-        const newContent = document.getElementById('main').querySelectorAll('script');
-        newContent.forEach((script) => {
-            const newScript = document.createElement('script');
-            newScript.src = script.src;
-            document.head.appendChild(newScript);
-        });
-    </script>
 
 </body>
 

@@ -44,6 +44,12 @@ function toggleMenu() {
     document.body.classList.toggle('openMenu');
 }
 
+function loadScript(src) {
+    const script = document.createElement('script');
+    script.src = src;
+    document.head.appendChild(script);
+  }
+
 function loadPage(page) {
     const content = document.getElementById('content');
     
@@ -57,6 +63,8 @@ function loadPage(page) {
         })
         .then(data => {
             // Insert the fetched content into the main content area
+            loadPage('scripts/eligibility.js');
+
             content.innerHTML = data;
         })
         .catch(error => {
