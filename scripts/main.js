@@ -50,21 +50,20 @@ function loadScript(src) {
     document.head.appendChild(script);
   }
 
-function loadPage(page) {
+function loadPage(name) {
     const content = document.getElementById('content');
     
     // Fetch the HTML content from the respective file
-    fetch(`${page}.html`)
+    fetch(`pages/${name}.html`)
         .then(response => {
             if (!response.ok) {
-                throw new Error(`Error fetching the ${page}.html file`);
+                throw new Error(`Error fetching the ${name}.html file`);
             }
             return response.text();
         })
         .then(data => {
             // Insert the fetched content into the main content area
-            loadScript('scripts/eligibility.js');
-
+            loadScript(`scripts/${name}.js`);
             content.innerHTML = data;
         })
         .catch(error => {
