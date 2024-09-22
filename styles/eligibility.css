@@ -1,9 +1,53 @@
 .slider-container {
     display: flex;
     align-items: center;
+    margin: 20px;
 }
-  
-#slider {
+
+#styled-slider {
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none;
     width: 300px;
-    margin-right: 10px;
+    height: 8px;
+    background: #ddd; /* Background color of the slider */
+    border-radius: 5px; /* Rounded edges */
+    outline: none;
+    margin-right: 15px; /* Space between slider and value */
+}
+
+/* Slider thumb styling */
+#styled-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #333; /* Darker thumb */
+    border-radius: 50%; /* Rounded thumb */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#styled-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Thumb hover effect */
+#styled-slider:hover::-webkit-slider-thumb {
+    background: #555; /* Slightly lighter on hover */
+}
+
+#styled-slider:hover::-moz-range-thumb {
+    background: #555;
+}
+
+/* Value display styling */
+#slider-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
 }
