@@ -54,6 +54,10 @@
 
 
 
+
+
+
+
 .switch {
     position: relative;
     display: inline-block;
@@ -99,3 +103,56 @@ input:checked + .slider-round:before {
     transform: translateX(26px);
 }
   
+
+
+
+
+
+
+
+/* General styling for select elements */
+select {
+    width: 100%;              /* Full width for the container */
+    max-width: 300px;          /* Limit maximum width */
+    padding: 10px;             /* Padding for inner spacing */
+    font-size: 16px;           /* Font size */
+    background-color: #f5f5f5; /* Light background for contrast */
+    color: #333;               /* Dark text color */
+    border: 2px solid #333;    /* Dark border */
+    border-radius: 8px;        /* Rounded corners */
+    outline: none;             /* Remove outline */
+    appearance: none;          /* Remove default arrow */
+    cursor: pointer;           /* Cursor pointer on hover */
+    transition: border-color 0.3s ease;
+}
+  
+/* Add a custom arrow */
+select::after {
+    content: '▼';             /* Arrow character */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;      /* Make the arrow unclickable */
+}
+  
+/* Hover effect */
+select:hover {
+    border-color: #555;        /* Slightly lighter border on hover */
+}
+  
+/* Focus effect */
+select:focus {
+    border-color: #2196F3;     /* Blue border on focus */
+}
+  
+/* Styling optgroup labels */
+optgroup {
+    font-weight: bold;         /* Make section headers bold */
+    color: #333;               /* Same dark color as other text */
+}
+  
+/* Option styling */
+option {
+    padding: 10px;             /* Padding inside options */
+}  
