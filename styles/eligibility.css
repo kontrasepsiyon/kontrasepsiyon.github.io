@@ -1,7 +1,9 @@
+/* Slider */
 .slider-container {
     display: flex;
     align-items: center;
-    margin: 20px;
+    margin: auto;
+    width: 50%;
 }
 
 #styled-slider {
@@ -53,10 +55,13 @@
 }
 
 
-
-
-
-
+/* Toggle */
+.toggle-switch {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
 
 .switch {
     position: relative;
@@ -102,15 +107,9 @@ input:checked + .slider-round {
 input:checked + .slider-round:before {
     transform: translateX(26px);
 }
-  
 
 
-
-
-
-
-
-/* General styling for select elements */
+/* Select */
 select {
     width: 100%;              /* Full width for the container */
     max-width: 300px;          /* Limit maximum width */
@@ -128,7 +127,6 @@ select {
   
 /* Add a custom arrow */
 select::after {
-    content: '▼';             /* Arrow character */
     position: absolute;
     right: 10px;
     top: 50%;
