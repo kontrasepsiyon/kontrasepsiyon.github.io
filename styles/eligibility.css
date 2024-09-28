@@ -161,6 +161,29 @@ select {
     background-color: #f0f0f0;
   }
   
+/* For group options */
+  .options li.group {
+    padding: 10px;
+    background-color: #e0e0e0;
+    font-weight: bold;
+    cursor: default;
+  }
+  
+  .options ul.group-options {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .options ul.group-options li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .options ul.group-options li:hover {
+    background-color: #f0f0f0;
+  }
+/* For group options */
+
   .custom-select.active .options {
     display: block;
   }
