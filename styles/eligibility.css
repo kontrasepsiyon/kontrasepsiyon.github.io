@@ -22,16 +22,16 @@
 #styled-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
     background: #333; /* Darker thumb */
     border-radius: 50%; /* Rounded thumb */
     cursor: pointer;
     transition: background 0.3s ease;
 }
 #styled-slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
     background: #333;
     border-radius: 50%;
     cursor: pointer;
@@ -52,6 +52,7 @@
     font-weight: bold;
     color: #333;
 }
+
 
 
 /* Toggle */
@@ -110,7 +111,6 @@ input:checked + .slider-round:before {
 
   
 
-
 /* Select */
 .custom-select {
     position: relative;
@@ -118,9 +118,7 @@ input:checked + .slider-round:before {
     max-width: fit-content;
     align-items: center;
     margin: auto;
-
     width: 200px;
-    margin: 20px 0;
 }
   
 .selected {
