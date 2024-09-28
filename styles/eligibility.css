@@ -151,6 +151,7 @@ input:checked + .slider-round:before {
 .options li {
     padding: 10px;
     cursor: pointer;
+    position: relative;
 }
   
 .options li:hover {
@@ -179,11 +180,6 @@ input:checked + .slider-round:before {
     padding-left: 20px; /* Indent group options */
 }
   
-/* Add a checkmark to the selected option */
-.options li {
-    position: relative; /* Ensure the checkmark is positioned relative to the option */
-}
-
 .checkmark {
     position: absolute; /* Position the checkmark absolutely within the li */
     right: 10px; /* Position it to the right */
