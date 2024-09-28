@@ -1,6 +1,7 @@
 /* Slider */
 .slider-container {
     display: block;
+    max-width: fit-content;
     align-items: center;
     margin: auto;
     padding-bottom: 10px;
@@ -55,10 +56,10 @@
 
 /* Toggle */
 .toggle-switch {
-    max-width: fit-content;
-    margin: auto;
     display: flex;
+    max-width: fit-content;
     align-items: center;
+    margin: auto;
     padding-bottom: 10px;
 }
 
@@ -139,10 +140,12 @@ select:hover {
 }
   
 /* Focus effect */
+/*
 select:focus {
-    border-color: #2196F3;     /* Blue border on focus */
+    border-color: #2196F3;
 }
-  
+*/
+
 /* Styling optgroup labels */
 optgroup {
     font-weight: bold;         /* Make section headers bold */
