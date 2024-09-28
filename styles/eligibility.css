@@ -70,7 +70,6 @@
     display: inline-block;
     width: 60px;
     height: 34px;
-    
     -webkit-tap-highlight-color: transparent;
 }
   
@@ -78,7 +77,6 @@
     opacity: 0;
     width: 0;
     height: 0;
-    
 }
   
 .slider-round {
@@ -91,7 +89,6 @@
     background-color: #ccc;
     transition: .4s;
     border-radius: 34px;
-    
 }
   
 .slider-round:before {
@@ -182,3 +179,20 @@ input:checked + .slider-round:before {
     padding-left: 20px; /* Indent group options */
 }
   
+/* Add a checkmark to the selected option */
+.options li {
+    position: relative; /* Ensure the checkmark is positioned relative to the option */
+}
+
+.checkmark {
+    position: absolute; /* Position the checkmark absolutely within the li */
+    right: 10px; /* Position it to the right */
+    display: none; /* Initially hidden */
+    font-size: 14px; /* Adjust size as needed */
+}
+
+/* Style for the selected option checkmark */
+.options li.selected-option .checkmark {
+    display: inline; /* Show checkmark for the selected option */
+    color: green; /* Change color if needed */
+}
