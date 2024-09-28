@@ -114,10 +114,10 @@ input:checked + .slider-round:before {
 /* Select */
 .custom-select {
     position: relative;
+    display: flex;
     max-width: fit-content;
     align-items: center;
     margin: auto;
-    padding-bottom: 10px;
 
     width: 200px;
     margin: 20px 0;
