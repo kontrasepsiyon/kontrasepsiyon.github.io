@@ -1,6 +1,6 @@
 /* Slider */
 .slider-container {
-    display: flex;
+    display: block;
     align-items: center;
     margin: auto;
     padding-bottom: 10px;
@@ -55,6 +55,7 @@
 
 /* Toggle */
 .toggle-switch {
+    max-width: fit-content;
     margin: auto;
     display: flex;
     align-items: center;
