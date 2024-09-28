@@ -125,3 +125,43 @@ select {
     /*transition: border-color 0.3s ease;*/
 }
   
+
+
+
+.custom-select {
+    position: relative;
+    width: 200px;
+  }
+  
+  .selected {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .options {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .options li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .options li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .custom-select.active .options {
+    display: block;
+  }
+  

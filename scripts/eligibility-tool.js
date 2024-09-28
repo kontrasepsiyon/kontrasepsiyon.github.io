@@ -21,3 +21,25 @@ slider.oninput = function() {
         output.innerHTML = "Not selected";
     }
 };
+
+
+
+
+
+
+
+
+const customSelect = document.querySelector('.custom-select');
+const selected = customSelect.querySelector('.selected');
+const options = customSelect.querySelectorAll('.options li');
+
+selected.addEventListener('click', () => {
+    customSelect.classList.toggle('active');
+});
+
+options.forEach(option => {
+    option.addEventListener('click', () => {
+        selected.textContent = option.textContent;
+        customSelect.classList.remove('active');
+    });
+});
