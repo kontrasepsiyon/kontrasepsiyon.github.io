@@ -55,7 +55,7 @@
 
 
 /* Toggle */
-.toggle-switch {
+.toggle-switch-container {
     display: flex;
     max-width: fit-content;
     align-items: center;
@@ -121,7 +121,7 @@ select {
     border-radius: 8px;        /* Rounded corners */
     outline: none;             /* Remove outline */
     appearance: none;          /* Remove default arrow */
-    cursor: pointer;           /* Cursor pointer on hover */
-    transition: border-color 0.3s ease;
+    /*cursor: pointer;            Cursor pointer on hover */
+    /*transition: border-color 0.3s ease;*/
 }
   
