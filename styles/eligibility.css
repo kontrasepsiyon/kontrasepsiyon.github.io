@@ -122,7 +122,7 @@ input:checked + .slider-round:before {
     max-width: fit-content;
     align-items: center;
     margin: auto;
-    width: 80%;
+    min-width: 80%;
     margin-bottom: 10px;
 }
   
@@ -131,7 +131,7 @@ input:checked + .slider-round:before {
     padding: 10px;
     border: 1px solid #ccc;
     cursor: pointer;
-    width: 80%;
+    min-width: 80%;
     text-align: center;
 }
   
