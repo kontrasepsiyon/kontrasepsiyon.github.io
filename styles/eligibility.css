@@ -125,34 +125,3 @@ select {
     transition: border-color 0.3s ease;
 }
   
-/* Add a custom arrow */
-select::after {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;      /* Make the arrow unclickable */
-}
-  
-/* Hover effect */
-select:hover {
-    border-color: #555;        /* Slightly lighter border on hover */
-}
-  
-/* Focus effect */
-/*
-select:focus {
-    border-color: #2196F3;
-}
-*/
-
-/* Styling optgroup labels */
-optgroup {
-    font-weight: bold;         /* Make section headers bold */
-    color: #333;               /* Same dark color as other text */
-}
-  
-/* Option styling */
-option {
-    padding: 10px;             /* Padding inside options */
-}  
