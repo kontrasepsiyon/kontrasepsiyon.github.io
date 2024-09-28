@@ -29,17 +29,27 @@ slider.oninput = function() {
 
 
 
-const customSelect = document.querySelector('.custom-select');
-const selected = customSelect.querySelector('.selected');
-const options = customSelect.querySelectorAll('.options li');
+document.querySelectorAll('.custom-select').forEach(customSelect => {
+  const selected = customSelect.querySelector('.selected');
+  const allOptions = customSelect.querySelectorAll('.options li:not(.group)'); // Ignore groups in the list
 
-selected.addEventListener('click', () => {
-    customSelect.classList.toggle('active');
-});
+  // Toggle dropdown when clicking the selected element
+  selected.addEventListener('click', () => {
+      customSelect.classList.toggle('active');
+  });
 
-options.forEach(option => {
-    option.addEventListener('click', () => {
-        selected.textContent = option.textContent;
-        customSelect.classList.remove('active');
-    });
+  // Add click event listeners to individual options
+  allOptions.forEach(option => {
+      option.addEventListener('click', () => {
+          selected.textContent = option.textContent;
+          customSelect.classList.remove('active');
+      });
+  });
+
+  // Optional: Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+      if (!customSelect.contains(e.target)) {
+          customSelect.classList.remove('active');
+      }
+  });
 });

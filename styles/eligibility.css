@@ -131,16 +131,17 @@ select {
 .custom-select {
     position: relative;
     width: 200px;
-  }
+    margin: 20px 0;
+}
   
-  .selected {
+.selected {
     background-color: #f0f0f0;
     padding: 10px;
     border: 1px solid #ccc;
     cursor: pointer;
-  }
+}
   
-  .options {
+.options {
     display: none;
     list-style: none;
     position: absolute;
@@ -148,43 +149,40 @@ select {
     width: 100%;
     background-color: white;
     border: 1px solid #ccc;
-    max-height: 200px;
+    max-height: 300px;
     overflow-y: auto;
-  }
+    padding: 0;
+    margin: 0;
+}
   
-  .options li {
+.options li {
     padding: 10px;
     cursor: pointer;
-  }
+}
   
-  .options li:hover {
+.options li:hover {
     background-color: #f0f0f0;
-  }
+}
   
-/* For group options */
-  .options li.group {
+.custom-select.active .options {
+    display: block;
+}
+  
+/* Additional styling for the grouped select */
+.options li.group {
     padding: 10px;
     background-color: #e0e0e0;
     font-weight: bold;
-    cursor: default;
+cursor: default;
   }
   
-  .options ul.group-options {
+.group-options {
     list-style: none;
     padding: 0;
-  }
+    margin: 0;
+}
   
-  .options ul.group-options li {
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .options ul.group-options li:hover {
-    background-color: #f0f0f0;
-  }
-/* For group options */
-
-  .custom-select.active .options {
-    display: block;
-  }
+.group-options li {
+    padding-left: 20px; /* Indent group options */
+}
   
