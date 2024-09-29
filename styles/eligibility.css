@@ -119,10 +119,8 @@ input:checked + .slider-round:before {
 .custom-select {
     position: relative;
     display: flow-root;
-    max-width: fit-content;
     align-items: center;
     margin: auto;
-    min-width: 80%;
     margin-bottom: 10px;
 }
   
