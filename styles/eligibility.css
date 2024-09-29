@@ -136,7 +136,15 @@ input:checked + .slider-round:before {
     overflow: hidden; /* Hide the overflowed content */
     text-overflow: ellipsis; /* Display ellipsis (...) for overflowed content */
 }
-  
+ 
+.clear-selection {
+    cursor: pointer;
+    color: red; /* You can choose another color */
+    font-size: 18px;
+    margin-left: 10px; /* Adjust spacing */
+    display: none; /* Initially hidden */
+}
+
 .options {
     display: none;
     list-style: none;
