@@ -28,7 +28,7 @@ slider.oninput = function() {
 
 document.querySelectorAll('.custom-select').forEach(customSelect => {
   const selected = customSelect.querySelector('.selected');
-  const allOptions = customSelect.querySelectorAll('.options li:not(.group)'); // Ignore group headings
+  const allOptions = customSelect.querySelectorAll('.options li:not(.group) label'); // Ignore group headings
 
   // Toggle dropdown when clicking the selected element
   selected.addEventListener('click', () => {
