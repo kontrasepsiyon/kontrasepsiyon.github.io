@@ -29,6 +29,7 @@ slider.oninput = function() {
 document.querySelectorAll('.custom-select').forEach(customSelect => {
   const selected = customSelect.querySelector('.selected');
   const allOptions = customSelect.querySelectorAll('.options li:not(.group)'); // Ignore group headings
+  const clearBtn = selected.querySelector('.clear-selection');
 
   // Toggle dropdown when clicking the selected element
   selected.addEventListener('click', () => {
@@ -57,6 +58,27 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
           customSelect.classList.remove('active');
       });
   });
+
+  // Clear the selection when the "X" button is clicked
+  clearBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent dropdown from opening
+
+    // Reset the displayed selected value
+    selectedLabel.textContent = 'Choose an option';
+
+    // Hide the clear button (X)
+    clearBtn.style.display = 'none';
+
+    // Remove 'selected-option' class and hide all checkmarks
+    customSelect.querySelectorAll('.options li.selected-option')
+        .forEach(selectedOption => {
+            selectedOption.classList.remove('selected-option');
+            selectedOption.querySelector('.checkmark').style.display = 'none'; // Hide checkmark
+        });
+
+    // Close the dropdown if it was open
+    customSelect.classList.remove('active');
+});
 
   // Optional: Close dropdown when clicking outside
   document.addEventListener('click', (e) => {
