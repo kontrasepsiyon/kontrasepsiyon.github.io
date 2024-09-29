@@ -133,6 +133,13 @@ input:checked + .slider-round:before {
     cursor: pointer;
     min-width: 80%;
     text-align: center;
+
+    white-space: nowrap; /* Prevent text from wrapping to a new line */
+    overflow: hidden; /* Hide the overflowed content */
+    text-overflow: ellipsis; /* Display ellipsis (...) for overflowed content */
+    display: inline-block; /* Keep the text in the same flow */
+    max-width: 80%;
+
 }
   
 .options {
