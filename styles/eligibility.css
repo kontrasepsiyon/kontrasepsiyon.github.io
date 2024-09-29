@@ -131,7 +131,8 @@ input:checked + .slider-round:before {
     cursor: pointer;
     min-width: 80%;
     text-align: center;
-
+    padding-right: 30px;
+    
     white-space: nowrap; /* Prevent text from wrapping to a new line */
     overflow: hidden; /* Hide the overflowed content */
     text-overflow: ellipsis; /* Display ellipsis (...) for overflowed content */
@@ -139,9 +140,13 @@ input:checked + .slider-round:before {
  
 .clear-selection {
     cursor: pointer;
-    color: red; /* You can choose another color */
+    color: red; /* Customize color */
     font-size: 18px;
-    margin-left: 10px; /* Adjust spacing */
+    position: absolute; /* Absolute positioning inside .selected */
+    right: 10px; /* Adjust this to position the 'X' */
+    top: 50%; /* Vertically center the 'X' */
+    transform: translateY(-50%); /* Adjust to keep it centered */
+    display: none; /* Initially hidden */
     display: none; /* Initially hidden */
 }
 
