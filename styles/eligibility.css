@@ -137,9 +137,6 @@ input:checked + .slider-round:before {
     white-space: nowrap; /* Prevent text from wrapping to a new line */
     overflow: hidden; /* Hide the overflowed content */
     text-overflow: ellipsis; /* Display ellipsis (...) for overflowed content */
-    display: inline-block; /* Keep the text in the same flow */
-    max-width: 80%;
-
 }
   
 .options {
