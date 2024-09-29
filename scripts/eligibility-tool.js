@@ -40,6 +40,7 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
       option.addEventListener('click', () => {
           // Update the displayed selected value
           selected.textContent = option.textContent;
+          print(selected)
 
           // Remove 'selected-option' class and hide checkmarks from all options
           customSelect.querySelectorAll('.options li.selected-option')
