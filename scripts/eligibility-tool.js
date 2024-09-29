@@ -41,7 +41,9 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
       option.addEventListener('click', () => {
           // Update the displayed selected value
           selected.textContent = option.querySelector('label').textContent;
-          console.log(selected)
+        
+          // Show the clear button (X)
+          clearBtn.style.display = 'inline';
 
           // Remove 'selected-option' class and hide checkmarks from all options
           customSelect.querySelectorAll('.options li.selected-option')
