@@ -147,6 +147,7 @@ input:checked + .slider-round:before {
     transform: translateY(-50%); /* Adjust to keep it centered */
     display: none; /* Initially hidden */
     display: none; /* Initially hidden */
+    line-height: 1;
 }
 
 .options {
