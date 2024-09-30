@@ -212,4 +212,5 @@ input:checked + .slider-round:before {
 /* Style for the selected option checkmark */
 .options li.selected-option .checkmark {
     display: inline; /* Show checkmark for the selected option */
+    line-height: 1;
 }
