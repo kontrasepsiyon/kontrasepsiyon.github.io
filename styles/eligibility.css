@@ -141,7 +141,6 @@ input:checked + .slider-round:before {
 .clear-selection {
     cursor: pointer;
     color: red; /* Customize color */
-    font-size: 18px;
     position: absolute; /* Absolute positioning inside .selected */
     right: 10px; /* Adjust this to position the 'X' */
     top: 50%; /* Vertically center the 'X' */
