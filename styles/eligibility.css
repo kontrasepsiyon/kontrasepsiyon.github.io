@@ -4,7 +4,7 @@
     max-width: fit-content;
     align-items: center;
     margin: auto;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 #styled-slider {
@@ -63,7 +63,7 @@
     max-width: fit-content;
     align-items: center;
     margin: auto;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .switch {
@@ -121,7 +121,7 @@ input:checked + .slider-round:before {
     display: flow-root;
     align-items: center;
     margin: auto;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
   
 .selected {
