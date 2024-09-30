@@ -132,7 +132,7 @@ input:checked + .slider-round:before {
     min-width: 80%;
     text-align: center;
     padding-right: 30px;
-    
+
     white-space: nowrap; /* Prevent text from wrapping to a new line */
     overflow: hidden; /* Hide the overflowed content */
     text-overflow: ellipsis; /* Display ellipsis (...) for overflowed content */
@@ -204,8 +204,12 @@ input:checked + .slider-round:before {
     font-size: 14px; /* Adjust size as needed */
 }
 
+.options li.selected-option {
+    display: flex; /* Makes the children align horizontally */
+    align-items: center;
+}
+
 /* Style for the selected option checkmark */
 .options li.selected-option .checkmark {
     display: inline; /* Show checkmark for the selected option */
-    color: green; /* Change color if needed */
 }
