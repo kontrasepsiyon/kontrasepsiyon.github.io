@@ -145,6 +145,7 @@ input:checked + .slider-round:before {
 }
   
 .selected {
+    position: relative; /* To allow absolutely positioned child */
     background-color: #f0f0f0;
     padding: 10px;
     border: 1px solid #ccc;
@@ -165,7 +166,6 @@ input:checked + .slider-round:before {
     right: 10px; /* Adjust this to position the 'X' */
     top: 50%; /* Vertically center the 'X' */
     transform: translateY(-50%); /* Adjust to keep it centered */
-    display: none; /* Initially hidden */
     display: none; /* Initially hidden */
     line-height: 1;
 }
