@@ -99,3 +99,34 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
     });
 });
   
+
+
+
+function animateCharts() {
+    const charts = document.querySelectorAll('.percentage-chart');
+    charts.forEach(chart => {
+      const value = chart.getAttribute('data-value');
+      const percentage = (value / 4) * 100; // Scale value (1-4) to percentage (0-100)
+      
+      // Animate the conic-gradient background
+      chart.style.background = `conic-gradient(
+        yellow 0%, 
+        yellow ${percentage - 25}%, 
+        red ${percentage}%
+      )`;
+    });
+  }
+  
+  // Initial animation
+  animateCharts();
+  
+  // Optionally, you can update the chart values dynamically
+  setInterval(() => {
+    document.querySelectorAll('.percentage-chart').forEach(chart => {
+      // Change the data-value dynamically (for example, cycling through values 1-4)
+      let newValue = Math.floor(Math.random() * 4) + 1;
+      chart.setAttribute('data-value', newValue);
+    });
+    animateCharts(); // Re-animate the charts after changing values
+  }, 3000); // Change the value every 3 seconds
+  
