@@ -237,7 +237,11 @@ input:checked + .slider-round:before {
 
 /*************************/
 /* Bottom charts */
-/* Sticky footer */
+
+  
+
+
+  /* Sticky footer */
 .sticky-footer {
     position: fixed;
     bottom: 0;
@@ -249,72 +253,31 @@ input:checked + .slider-round:before {
     padding: 20px;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-}
+  }
   
-/* Circular percentage chart */
-.percentage-chart {
-    width: 10%; /* Set width to 10% of the container */
-    aspect-ratio: 1 / 1; /* Ensure the height is equal to the width */
-    background: conic-gradient(yellow 0%, yellow 0%); /* default (empty) */
-    border-radius: 50%;
-    position: relative;
+  .percentage-chart {
+    width: 10%; /* Chart takes up 10% width of container */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    transition: background 1s ease; /* Smooth transition */
   }
   
-.percentage-chart::before {
-    content: '';
-    position: absolute;
-    width: 70%;
-    height: 70%;
-    background: white;
-    border-radius: 50%;
-}
+  /* Circular chart styling */
+  .progress-ring {
+    transform: rotate(-90deg); /* Rotate circle to start at the top */
+  }
   
-/* Percentage text in the center of the chart */
-.percentage-chart::after {
-    content: attr(data-value);
-    font-size: 1.5rem;
+  .progress-ring__circle {
+    stroke-dasharray: 226.195; /* Circumference of the circle (2πr) */
+    stroke-dashoffset: 226.195; /* Initially hide the stroke */
+    transition: stroke-dashoffset 1.5s ease-in-out; /* Smooth animation */
+  }
+  
+  /* Chart label */
+  .chart-label {
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #333;
-}
-  
-  /* Animation for gradually filling the chart */
-  @keyframes fillCircle {
-    from {
-      background: conic-gradient(yellow 0%, yellow 0%);
-    }
-    to {
-      background: conic-gradient(yellow 0%, yellow 25%, transparent 25%);
-    }
-  }
-  
-  @keyframes fillCircle50 {
-    from {
-      background: conic-gradient(yellow 0%, yellow 0%);
-    }
-    to {
-      background: conic-gradient(yellow 0%, yellow 25%, orange 50%, transparent 50%);
-    }
-  }
-  
-  @keyframes fillCircle75 {
-    from {
-      background: conic-gradient(yellow 0%, yellow 0%);
-    }
-    to {
-      background: conic-gradient(yellow 0%, yellow 25%, orange 50%, red 75%, transparent 75%);
-    }
-  }
-  
-  @keyframes fillCircle100 {
-    from {
-      background: conic-gradient(yellow 0%, yellow 0%);
-    }
-    to {
-      background: conic-gradient(red 0%, red 100%);
-    }
+    margin-top: 10px;
+    text-align: center;
   }
   

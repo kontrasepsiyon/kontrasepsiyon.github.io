@@ -101,45 +101,40 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
   
 
 
-
-function animateCharts() {
-    const charts = document.querySelectorAll('.percentage-chart');
+function setChartValue(chart, value) {
+    const circle = chart.querySelector('.progress-ring__circle');
+    const radius = circle.r.baseVal.value;
+    const circumference = 2 * Math.PI * radius;
   
-    charts.forEach(chart => {
-      const value = chart.getAttribute('data-value');
-      let animationName = '';
+    // Set the stroke-dasharray and stroke-dashoffset properties
+    circle.style.strokeDasharray = `${circumference}`;
+    circle.style.strokeDashoffset = `${circumference}`;
   
-      // Determine the animation name based on the value
-      switch (value) {
-        case '1': // 25% yellow
-          animationName = 'fillCircle';
-          break;
-        case '2': // 50% yellow to orange
-          animationName = 'fillCircle50';
-          break;
-        case '3': // 75% yellow to orange to red
-          animationName = 'fillCircle75';
-          break;
-        case '4': // 100% red
-          animationName = 'fillCircle100';
-          break;
-      }
+    // Calculate the percentage offset for the selected value
+    const offset = circumference - (value / 4) * circumference;
   
-      // Apply the animation
-      chart.style.animation = `${animationName} 2s forwards`; // 2s animation time
-    });
+    // Animate the stroke-dashoffset
+    circle.style.strokeDashoffset = offset;
+  
+    // Update the label with the percentage value
+    const label = chart.querySelector('.chart-label');
+    label.textContent = `${(value / 4) * 100}%`;
+  
+    // Change the color based on the value
+    if (value === 1) {
+      circle.style.stroke = 'yellow';
+    } else if (value === 2) {
+      circle.style.stroke = 'orange';
+    } else if (value === 3) {
+      circle.style.stroke = 'red';
+    } else if (value === 4) {
+      circle.style.stroke = 'darkred';
+    }
   }
   
-  // Initial animation
-  animateCharts();
-  
-  // Optionally, dynamically update the chart values and animate them
-  setInterval(() => {
-    document.querySelectorAll('.percentage-chart').forEach(chart => {
-      // Change the data-value dynamically (for example, cycling through values 1-4)
-      let newValue = Math.floor(Math.random() * 4) + 1;
-      chart.setAttribute('data-value', newValue);
-    });
-    animateCharts(); // Re-animate the charts after changing values
-  }, 3000); // Change the value every 3 seconds
+  // Initialize the charts
+  document.querySelectorAll('.percentage-chart').forEach(chart => {
+    const value = chart.getAttribute('data-value');
+    setChartValue(chart, value);
+  });
   
