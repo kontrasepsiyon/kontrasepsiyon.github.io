@@ -63,7 +63,7 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
             customSelect.classList.remove('active');
 
 
-            selected.setAttribute(option.getAttribute('data-value'));
+            selected.setAttribute('data-value', option.getAttribute('data-value'));
         });
     });
 
