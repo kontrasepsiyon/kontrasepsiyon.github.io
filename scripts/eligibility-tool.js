@@ -135,7 +135,8 @@ function setChartValue(chart, value) {
   // Initialize the charts
 setInterval(() => {
     document.querySelectorAll('.percentage-chart').forEach(chart => {
-        const value = chart.getAttribute(Math.floor(Math.random() * (4) + 1));
+        //const value = chart.getAttribute('data-value');
+        value = Math.floor(Math.random() * (4) + 1);      
         setChartValue(chart, value);
     });
 }, 3000); // Change the value every 3 seconds
