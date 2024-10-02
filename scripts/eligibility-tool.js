@@ -136,9 +136,7 @@ function setChartValue(chart, value) {
       */
 
     setTimeout(() => {
-        const offset = circumference - (value / 4) * circumference;
-        circle.style.transition = 'stroke-dashoffset 1s ease-in-out'; // Smooth transition
-        circle.style.strokeDashoffset = offset;
+        circle.style.strokeDashoffset = `${circumference}`;
     
         // Change the color based on the value
         if (value === 1) {
