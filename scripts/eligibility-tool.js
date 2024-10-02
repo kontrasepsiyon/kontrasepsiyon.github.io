@@ -103,6 +103,7 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
 
 function setChartValue(chart, value) {
     const circle = chart.querySelector('.progress-ring__circle');
+    //const text = chart.querySelector('.chart-label');
     const radius = circle.r.baseVal.value;
     const circumference = 2 * Math.PI * radius;
   
@@ -119,7 +120,8 @@ function setChartValue(chart, value) {
     // Update the label with the percentage value
     const label = chart.querySelector('.chart-label');
     label.textContent = `${(value / 4) * 100}%`;
-  
+    //text.textContent = `${percentage}%`;
+
     // Change the color based on the value
     if (value === 1) {
       circle.setAttribute('stroke', 'yellow');
