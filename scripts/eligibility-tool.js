@@ -104,45 +104,29 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
 
 function animateCharts() {
     const charts = document.querySelectorAll('.percentage-chart');
+  
     charts.forEach(chart => {
       const value = chart.getAttribute('data-value');
-      let gradient = '';
+      let animationName = '';
   
+      // Determine the animation name based on the value
       switch (value) {
         case '1': // 25% yellow
-          gradient = `conic-gradient(
-            yellow 0%, 
-            yellow 25%, 
-            transparent 25% 100%
-          )`;
+          animationName = 'fillCircle';
           break;
         case '2': // 50% yellow to orange
-          gradient = `conic-gradient(
-            yellow 0%, 
-            yellow 25%, 
-            orange 50%, 
-            transparent 50% 100%
-          )`;
+          animationName = 'fillCircle50';
           break;
         case '3': // 75% yellow to orange to red
-          gradient = `conic-gradient(
-            yellow 0%, 
-            yellow 25%, 
-            orange 50%, 
-            red 75%, 
-            transparent 75% 100%
-          )`;
+          animationName = 'fillCircle75';
           break;
         case '4': // 100% red
-          gradient = `conic-gradient(
-            red 0%, 
-            red 100%
-          )`;
+          animationName = 'fillCircle100';
           break;
       }
   
-      // Apply the gradient as the background of the chart
-      chart.style.background = gradient;
+      // Apply the animation
+      chart.style.animation = `${animationName} 2s forwards`; // 2s animation time
     });
   }
   
