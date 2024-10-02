@@ -133,8 +133,11 @@ function setChartValue(chart, value) {
   }
   
   // Initialize the charts
-  document.querySelectorAll('.percentage-chart').forEach(chart => {
-    const value = chart.getAttribute('data-value');
-    setChartValue(chart, value);
-  });
+setInterval(() => {
+    document.querySelectorAll('.percentage-chart').forEach(chart => {
+        const value = chart.getAttribute('data-value');
+        setChartValue(chart, value);
+    });
+}, 3000); // Change the value every 3 seconds
+
   

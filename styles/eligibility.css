@@ -241,7 +241,7 @@ input:checked + .slider-round:before {
   
 
 
-  /* Sticky footer */
+/* Sticky footer */
 .sticky-footer {
     position: fixed;
     bottom: 0;
