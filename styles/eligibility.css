@@ -1,3 +1,10 @@
+@media screen and (min-width: 1025px) and (max-width: 2048px) {
+    .eligibilty-wrapper {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
 /* Slider */
 .slider-container {
     display: block;
