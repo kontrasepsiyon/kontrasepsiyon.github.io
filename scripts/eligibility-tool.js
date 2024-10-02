@@ -148,7 +148,7 @@ function setChartValue(chart, value) {
         } else if (value === 4) {
             circle.setAttribute('stroke', 'darkred');
         }
-    }, 50); // Small delay to ensure the strokeDashoffset is set to circumference before animating
+    }, 2000); // Small delay to ensure the strokeDashoffset is set to circumference before animating
   }
   
   // Initialize the charts
@@ -158,6 +158,6 @@ setInterval(() => {
         value = Math.floor(Math.random() * (4) + 1);      
         setChartValue(chart, value);
     });
-}, 3000); // Change the value every 3 seconds
+}, 5000); // Change the value every 3 seconds
 
   
