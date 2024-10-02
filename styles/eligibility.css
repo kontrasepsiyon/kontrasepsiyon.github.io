@@ -1,3 +1,4 @@
+/* If the screen width is greater than 800px */
 @media screen and (min-width: 800px) {
     .eligibilty-wrapper {
         width: 60%;
@@ -68,17 +69,20 @@
 .toggle-switch-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin: auto;
     margin-bottom: 20px;
 }
 
+/* If the screen width is greater than 800px */
 @media screen and (min-width: 800px) {
     .toggle-switch-container {
         display: flex;
         align-items: center;
-        max-width: fit-content;
+        justify-content: space-between;
         margin: auto;
         margin-bottom: 20px;
+        width: 50%;
     }
 }
 
