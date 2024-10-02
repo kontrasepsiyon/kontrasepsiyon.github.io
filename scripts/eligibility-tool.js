@@ -122,13 +122,13 @@ function setChartValue(chart, value) {
   
     // Change the color based on the value
     if (value === 1) {
-      circle.stroke = 'yellow';
+      circle.setAttribute('stroke', 'yellow');
     } else if (value === 2) {
-      circle.stroke = 'orange';
+      circle.setAttribute('stroke', 'orange');
     } else if (value === 3) {
-      circle.stroke = 'red';
+      circle.setAttribute('stroke', 'red');
     } else if (value === 4) {
-      circle.stroke = 'darkred';
+      circle.setAttribute('stroke', 'darkred');
     }
   }
   
