@@ -235,12 +235,9 @@ input:checked + .slider-round:before {
     line-height: 1;
 }
 
+
 /*************************/
 /* Bottom charts */
-
-  
-
-
 /* Sticky footer */
 .sticky-footer {
     position: fixed;

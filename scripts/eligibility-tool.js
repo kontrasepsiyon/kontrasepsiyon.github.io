@@ -123,7 +123,6 @@ function setChartValue(chart, value) {
     //text.textContent = `${percentage}%`;
 
     // Change the color based on the value
-    /*
     if (value === 1) {
       circle.setAttribute('stroke', 'yellow');
     } else if (value === 2) {
@@ -133,8 +132,8 @@ function setChartValue(chart, value) {
     } else if (value === 4) {
       circle.setAttribute('stroke', 'darkred');
     }
-      */
 
+    /*
     setTimeout(() => {
         circle.style.strokeDashoffset = `${circumference}`;
     
@@ -149,7 +148,8 @@ function setChartValue(chart, value) {
             circle.setAttribute('stroke', 'darkred');
         }
     }, 2000); // Small delay to ensure the strokeDashoffset is set to circumference before animating
-  }
+    */
+}
   
   // Initialize the charts
 setInterval(() => {
