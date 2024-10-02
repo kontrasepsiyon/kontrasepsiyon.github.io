@@ -255,7 +255,8 @@ input:checked + .slider-round:before {
   }
   
   .percentage-chart {
-    width: 10%; /* Chart takes up 10% width of container */
+    width: 10vw; /* 10% of the viewport width */
+    aspect-ratio: 1 / 1; /* Ensures height equals width */
     display: flex;
     flex-direction: column;
     align-items: center;
