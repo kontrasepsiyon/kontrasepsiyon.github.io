@@ -61,6 +61,9 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
 
             // Close the dropdown after selection
             customSelect.classList.remove('active');
+
+
+            selected.setAttribute(option.getAttribute('data-value'));
         });
     });
 
@@ -83,6 +86,9 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
 
         // Close the dropdown if it was open
         customSelect.classList.remove('active');
+
+
+        selected.removeAttribute('data-value');
     });
 
     // Optional: Close dropdown when clicking outside
