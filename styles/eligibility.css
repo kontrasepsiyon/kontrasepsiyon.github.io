@@ -253,8 +253,8 @@ input:checked + .slider-round:before {
   
 /* Circular percentage chart */
 .percentage-chart {
-    width: 80px;
-    height: 80px;
+    width: 10%; /* Set width to 10% of the container */
+    aspect-ratio: 1 / 1; /* Ensure the height is equal to the width */
     background: conic-gradient(yellow 0%, yellow 0%); /* default (empty) */
     border-radius: 50%;
     position: relative;
@@ -262,7 +262,7 @@ input:checked + .slider-round:before {
     justify-content: center;
     align-items: center;
     transition: background 1s ease; /* Smooth transition */
-}
+  }
   
 .percentage-chart::before {
     content: '';
