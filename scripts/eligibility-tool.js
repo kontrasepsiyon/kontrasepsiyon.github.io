@@ -106,21 +106,50 @@ function animateCharts() {
     const charts = document.querySelectorAll('.percentage-chart');
     charts.forEach(chart => {
       const value = chart.getAttribute('data-value');
-      const percentage = (value / 4) * 100; // Scale value (1-4) to percentage (0-100)
-      
-      // Animate the conic-gradient background
-      chart.style.background = `conic-gradient(
-        yellow 0%, 
-        yellow ${percentage - 25}%, 
-        red ${percentage}%
-      )`;
+      let gradient = '';
+  
+      switch (value) {
+        case '1': // 25% yellow
+          gradient = `conic-gradient(
+            yellow 0%, 
+            yellow 25%, 
+            transparent 25% 100%
+          )`;
+          break;
+        case '2': // 50% yellow to orange
+          gradient = `conic-gradient(
+            yellow 0%, 
+            yellow 25%, 
+            orange 50%, 
+            transparent 50% 100%
+          )`;
+          break;
+        case '3': // 75% yellow to orange to red
+          gradient = `conic-gradient(
+            yellow 0%, 
+            yellow 25%, 
+            orange 50%, 
+            red 75%, 
+            transparent 75% 100%
+          )`;
+          break;
+        case '4': // 100% red
+          gradient = `conic-gradient(
+            red 0%, 
+            red 100%
+          )`;
+          break;
+      }
+  
+      // Apply the gradient as the background of the chart
+      chart.style.background = gradient;
     });
   }
   
   // Initial animation
   animateCharts();
   
-  // Optionally, you can update the chart values dynamically
+  // Optionally, dynamically update the chart values and animate them
   setInterval(() => {
     document.querySelectorAll('.percentage-chart').forEach(chart => {
       // Change the data-value dynamically (for example, cycling through values 1-4)
