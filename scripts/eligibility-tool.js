@@ -122,20 +122,20 @@ function setChartValue(chart, value) {
   
     // Change the color based on the value
     if (value === 1) {
-      circle.style.stroke = 'yellow';
+      circle.stroke = 'yellow';
     } else if (value === 2) {
-      circle.style.stroke = 'orange';
+      circle.stroke = 'orange';
     } else if (value === 3) {
-      circle.style.stroke = 'red';
+      circle.stroke = 'red';
     } else if (value === 4) {
-      circle.style.stroke = 'darkred';
+      circle.stroke = 'darkred';
     }
   }
   
   // Initialize the charts
 setInterval(() => {
     document.querySelectorAll('.percentage-chart').forEach(chart => {
-        const value = chart.getAttribute('data-value');
+        const value = chart.getAttribute(Math.floor(Math.random() * (4) + 1));
         setChartValue(chart, value);
     });
 }, 3000); // Change the value every 3 seconds
