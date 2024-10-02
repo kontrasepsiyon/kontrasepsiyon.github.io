@@ -247,12 +247,11 @@ input:checked + .slider-round:before {
     background-color: #f9f9f9;
     display: flex;
     justify-content: space-around;
-    padding: 20px;
     z-index: 1000;
   }
   
   .percentage-chart {
-    width: 10vw; /* 10% of the viewport width */
+    width: 16vw; /* 10% of the viewport width */
     aspect-ratio: 1 / 1; /* Ensures height equals width */
     display: flex;
     flex-direction: column;
