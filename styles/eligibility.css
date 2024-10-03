@@ -236,7 +236,7 @@ input:checked + .slider-round:before {
 }
 
 
-/*************************/
+/*************************/ /*#A5C9FF;*/
 /* Bottom charts */
 /* Sticky footer */
 .sticky-footer {
@@ -244,7 +244,7 @@ input:checked + .slider-round:before {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #A5C9FF;
+    background-color: #f0f0f0 
     display: flex;
     justify-content: space-around;
     z-index: 1000;
@@ -259,6 +259,17 @@ input:checked + .slider-round:before {
     flex-direction: column;
     align-items: center;
   }
+
+/* If the screen width is greater than 800px */
+@media screen and (min-width: 800px) {
+    .percentage-chart {
+        width: 8vw; /* 10% of the viewport width */
+        aspect-ratio: 1 / 1; /* Ensures height equals width */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
   
   /* Circular chart styling */
   .progress-ring {
