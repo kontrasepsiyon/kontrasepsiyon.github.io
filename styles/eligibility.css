@@ -263,7 +263,7 @@ input:checked + .slider-round:before {
 /* If the screen width is greater than 800px */
 @media screen and (min-width: 800px) {
     .percentage-chart {
-        width: 8vw; /* 10% of the viewport width */
+        width: 4vw; /* 10% of the viewport width */
         aspect-ratio: 1 / 1; /* Ensures height equals width */
         display: flex;
         flex-direction: column;
