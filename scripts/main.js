@@ -49,7 +49,7 @@ const scriptsDownloadded = []
 function loadScript(src) {
     if (!scriptsDownloadded.includes(src)) {
         const script = document.createElement('script');
-        scriptsDownloadded.push(src);
+        //scriptsDownloadded.push(src);
         script.src = src;
         document.head.appendChild(script);
     }
