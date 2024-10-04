@@ -44,16 +44,11 @@ function toggleMenu() {
     document.body.classList.toggle('openMenu');
 }
 
-const scriptsDownloadded = []
-
 function loadScript(src) {
-    if (!scriptsDownloadded.includes(src)) {
-        const script = document.createElement('script');
-        //scriptsDownloadded.push(src);
-        script.src = src;
-        document.head.appendChild(script);
-    }
-  }
+    const script = document.createElement('script');
+    script.src = src;
+    document.head.appendChild(script);
+}
 
 function loadPage(name) {
     const content = document.getElementById('content');
