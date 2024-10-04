@@ -1,29 +1,28 @@
-/*
-const slider = document.getElementById("styled-slider");
-const output = document.getElementById("slider-value");
+(function() {
+    const slider = document.getElementById("styled-slider");
+    const output = document.getElementById("slider-value");
 
-slider.oninput = function() {
-    if (slider.value  == "1") {
-        output.innerHTML = "Menarche to < 18 years"
-    } 
-    else if (slider.value  == "2") {
-        output.innerHTML = "18 - 19"
-    } 
-    else if (slider.value  == "3") {
-        output.innerHTML = "20 - 39"
-    }
-    else if (slider.value  == "4") {
-        output.innerHTML = "40 - 45"
-    }
-    else if (slider.value  == "5") {
-        output.innerHTML = ">= 46"
-    }
-    else {
-        output.innerHTML = "Not selected";
-    }
-};
-*/
-
+    slider.oninput = function() {
+        if (slider.value  == "1") {
+            output.innerHTML = "Menarche to < 18 years"
+        } 
+        else if (slider.value  == "2") {
+            output.innerHTML = "18 - 19"
+        } 
+        else if (slider.value  == "3") {
+            output.innerHTML = "20 - 39"
+        }
+        else if (slider.value  == "4") {
+            output.innerHTML = "40 - 45"
+        }
+        else if (slider.value  == "5") {
+            output.innerHTML = ">= 46"
+        }
+        else {
+            output.innerHTML = "Not selected";
+        }
+    };    
+})();
 
 
 document.querySelectorAll('.custom-select').forEach(customSelect => {
@@ -133,23 +132,6 @@ function setChartValue(chart, value) {
     } else if (value === 4) {
       circle.setAttribute('stroke', 'darkred');
     }
-
-    /*
-    setTimeout(() => {
-        circle.style.strokeDashoffset = `${circumference}`;
-    
-        // Change the color based on the value
-        if (value === 1) {
-            circle.setAttribute('stroke', 'yellow');
-        } else if (value === 2) {
-            circle.setAttribute('stroke', 'orange');
-        } else if (value === 3) {
-            circle.setAttribute('stroke', 'red');
-        } else if (value === 4) {
-            circle.setAttribute('stroke', 'darkred');
-        }
-    }, 2000); // Small delay to ensure the strokeDashoffset is set to circumference before animating
-    */
 }
   
   // Initialize the charts
