@@ -107,6 +107,12 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
   
 
 
+
+
+
+
+
+
 function setChartValue(chart, value) {
     const circle = chart.querySelector('.progress-ring__circle');
     //const text = chart.querySelector('.chart-label');

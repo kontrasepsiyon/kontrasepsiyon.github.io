@@ -1,4 +1,5 @@
 const defaultLanguage = 'en';
+const languageSet = '';
 const data = {};
 
 // Function to load the JSON file for the selected language
@@ -25,6 +26,7 @@ async function setLanguage(language) {
     const translations = await loadLanguage(language);
     if (translations) {
         updateContent(translations);
+        languageSet = language;
         localStorage.setItem('language', language); // Store user's choice
     }
 }
