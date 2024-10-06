@@ -5,21 +5,27 @@
     slider.oninput = function() {
         if (slider.value  == "1") {
             output.innerHTML = "Menarche to < 18 years"
+            data.age = 1
         } 
         else if (slider.value  == "2") {
             output.innerHTML = "18 - 19"
+            data.age = 2
         } 
         else if (slider.value  == "3") {
             output.innerHTML = "20 - 39"
+            data.age = 3
         }
         else if (slider.value  == "4") {
             output.innerHTML = "40 - 45"
+            data.age = 4
         }
         else if (slider.value  == "5") {
             output.innerHTML = ">= 46"
+            data.age = 5
         }
         else {
             output.innerHTML = "Not selected";
+            data.age = -1
         }
     };    
 })();
