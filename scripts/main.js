@@ -64,7 +64,7 @@ function loadPage(name) {
         })
         .then(data => {
             // Insert the fetched content into the main content area
-            //loadScript(`scripts/${name}.js`);
+            loadScript(`scripts/${name}.js`);
             content.innerHTML = data;
         })
         .catch(error => {

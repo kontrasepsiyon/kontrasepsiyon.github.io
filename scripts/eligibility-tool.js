@@ -31,6 +31,8 @@
 })();
 
 
+
+
 document.querySelectorAll('.custom-select').forEach(customSelect => {
     const selected = customSelect.querySelector('.selected');
     const selectedLabel = selected.querySelector('.selected-label');
@@ -105,11 +107,6 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
     });
 });
   
-
-
-
-
-
 
 
 
