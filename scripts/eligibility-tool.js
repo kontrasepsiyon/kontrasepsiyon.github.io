@@ -39,6 +39,7 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
     const clearBtn = selected.querySelector('.clear-selection');
     const allOptions = customSelect.querySelectorAll('.options li:not(.group)'); // Ignore group headings
 
+    /*
     // Toggle dropdown when clicking the selected element
     selected.addEventListener('click', (e) => {
         // Check if the clear button is clicked
@@ -46,7 +47,8 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
             customSelect.classList.toggle('active');
         }
     });
-
+    */
+   
     // Add click event listeners to individual options
     allOptions.forEach(option => {
         option.addEventListener('click', () => {
