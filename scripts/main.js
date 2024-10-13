@@ -1,5 +1,5 @@
 const defaultLanguage = 'en';
-const data = {};
+const eligibilityData = {};
 
 // Function to load the JSON file for the selected language
 async function loadLanguage(language) {
