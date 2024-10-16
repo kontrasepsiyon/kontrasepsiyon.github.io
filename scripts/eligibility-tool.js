@@ -42,6 +42,9 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
 
     // Toggle dropdown when clicking the selected element
     selected.addEventListener('click', (e) => {
+        print(e)
+        print(e.target)
+        print(e.target.classList)
         // Check if the clear button is clicked
         if (!e.target.classList.contains('clear-selection')) {
             customSelect.classList.toggle('active');
