@@ -42,9 +42,6 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
 
     // Toggle dropdown when clicking the selected element
     selected.addEventListener('click', (e) => {
-        console.log(e)
-        console.log(e.target)
-        console.log(e.target.classList)
         // Check if the clear button is clicked
         // Then do not set options to active again
         if (!e.target.classList.contains('clear-selection')) {
@@ -82,7 +79,8 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
 
     // Clear the selection when the "X" button is clicked
     clearBtn.addEventListener('click', (e) => {
-        //e.stopPropagation(); // Prevent dropdown from opening
+        e.stopPropagation(); // Prevent dropdown from opening
+        // Prevents the event listener defined above to be called again
 
         // Reset the displayed selected value
         selectedLabel.textContent = 'Choose an option';
