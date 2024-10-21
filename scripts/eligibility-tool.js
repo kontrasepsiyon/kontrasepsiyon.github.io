@@ -73,7 +73,7 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
             // Close the dropdown after selection
             customSelect.classList.remove('active');
 
-            eligibilityData.data_label.getAttribute('data-label') = option.getAttribute('data-value');
+            eligibilityData[data_label.getAttribute('data-label')] = option.getAttribute('data-value');
             selected.setAttribute('data-value', option.getAttribute('data-value'));
         });
     });
