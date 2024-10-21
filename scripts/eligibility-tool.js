@@ -34,6 +34,7 @@
 
 
 document.querySelectorAll('.custom-select').forEach(customSelect => {
+    const data_label = customSelect.querySelector('.label');
     const selected = customSelect.querySelector('.selected');
     const selectedLabel = selected.querySelector('.selected-label');
     const clearBtn = selected.querySelector('.clear-selection');
@@ -72,15 +73,15 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
             // Close the dropdown after selection
             customSelect.classList.remove('active');
 
-
+            eligibilityData.data_label.getAttribute('data-label') = option.getAttribute('data-value');
             selected.setAttribute('data-value', option.getAttribute('data-value'));
         });
     });
 
     // Clear the selection when the "X" button is clicked
     clearBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent dropdown from opening
         // Prevents the event listener defined above to be called again
+        e.stopPropagation(); // Prevent dropdown from opening
 
         // Reset the displayed selected value
         selectedLabel.textContent = 'Choose an option';
