@@ -99,7 +99,7 @@ document.querySelectorAll('.custom-select').forEach(customSelect => {
         // Close the dropdown if it was open
         customSelect.classList.remove('active');
 
-
+        delete eligibilityData[data_label.getAttribute('data-label')];
         selected.removeAttribute('data-value');
     });
 
