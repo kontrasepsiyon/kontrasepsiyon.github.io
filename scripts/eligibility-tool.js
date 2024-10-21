@@ -34,7 +34,7 @@
 
 
 document.querySelectorAll('.custom-select').forEach(customSelect => {
-    const data_label = customSelect.querySelector('.label');
+    const data_label = customSelect.querySelector('label');
     const selected = customSelect.querySelector('.selected');
     const selectedLabel = selected.querySelector('.selected-label');
     const clearBtn = selected.querySelector('.clear-selection');
